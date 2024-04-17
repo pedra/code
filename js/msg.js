@@ -61,4 +61,4 @@ var msg = {
 		});
 		return false;
 	}
-};
+}

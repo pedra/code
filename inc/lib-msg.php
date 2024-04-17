@@ -99,12 +99,3 @@ class Message
 		return true;
 	}
 }
-
-// (H) MESSAGE OBJECT
-$_MSG = new Message();
-
-// (I) ACT AS USER
-session_start();
-// $_SESSION["user"] = ["id" => 1, "name" => "Joe Doe"];
-// $_SESSION["user"] = ["id" => 2, "name" => "Jon Doe"];
-$_SESSION["user"] = ["id" => 3, "name" => "Joy Doe"];

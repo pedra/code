@@ -6,12 +6,18 @@
 
 /* (B) LAYOUT */
 body {
-  padding: 0; margin: 0;
-  width: 100vw; height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: stretch;
+  flex-direction: column;
 }
-#uLeft, #uRight { overflow: auto; }
+#uLeft,
+#uRight {
+  overflow: auto;
+}
 #uLeft {
   width: 170px;
   color: #fff;
@@ -24,7 +30,10 @@ body {
 
 /* (C) LEFT : USERS LIST */
 /* (C1) SHARED */
-#uNow, .uRow { padding: 10px; }
+#uNow,
+.uRow {
+  padding: 10px;
+}
 
 /* (C2) CURRENT USER */
 #uNow {
@@ -34,6 +43,7 @@ body {
 }
 #uNow img {
   width: 80px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   margin-bottom: 5px;
 }
@@ -52,7 +62,9 @@ body {
   background: #890e0e;
   font-weight: 700;
 }
-.uName { flex-grow: 1; }
+.uName {
+  flex-grow: 1;
+}
 .uUnread {
   text-decoration: none;
   display: inline-block;
@@ -69,12 +81,14 @@ body {
   padding: 15px;
   background: #eee;
 }
-#uSend input { padding: 10px; }
-#uSend input[type=text] {
+#uSend input {
+  padding: 10px;
+}
+#uSend input[type="text"] {
   flex-grow: 1;
   border: 0;
 }
-#uSend input[type=submit] {
+#uSend input[type="submit"] {
   color: #fff;
   background: #890e0e;
   border: 0;
@@ -85,15 +99,24 @@ body {
   display: flex;
   margin: 10px;
 }
-.mOut { flex-direction: row; }
-.mIn { flex-direction: row-reverse; }
+.mOut {
+  flex-direction: row;
+}
+.mIn {
+  flex-direction: row-reverse;
+}
 .mRowMsg {
   position: relative;
   padding: 10px;
   border-radius: 10px;
 }
-.mDate { color: #a7a7a7; }
-.mSender, .mDate { font-size: 0.8em; }
+.mDate {
+  color: #a7a7a7;
+}
+.mSender,
+.mDate {
+  font-size: 0.8em;
+}
 .mTxt {
   padding: 5px 0;
   font-size: 1.1em;
@@ -104,8 +127,12 @@ body {
   margin-left: 20px;
   background: #dde5ff;
 }
-.mOut .mTxt { color: #212491; }
-.mOut .mSender { color: #9295fd; }
+.mOut .mTxt {
+  color: #212491;
+}
+.mOut .mSender {
+  color: #9295fd;
+}
 
 /* (D3) MESSAGES - RECEIVED */
 .mIn .mRowMsg {
@@ -113,8 +140,12 @@ body {
   text-align: right;
   background: #ffe7e7;
 }
-.mIn .mTxt { color: #c52020; }
-.mIn .mSender { color: #dfa9a9; }
+.mIn .mTxt {
+  color: #c52020;
+}
+.mIn .mSender {
+  color: #dfa9a9;
+}
 
 /* (D4) SPEECH BUBBLE TAIL */
 .mRowMsg::after {
@@ -123,14 +154,14 @@ body {
   border: 13px solid transparent;
 }
 .mOut .mRowMsg::after {
-  border-right-color:#dde5ff;
+  border-right-color: #dde5ff;
   border-left: 0;
   margin-top: -13px;
   top: 50%;
   left: -13px;
 }
 .mIn .mRowMsg::after {
-  border-left-color:#ffe7e7;
+  border-left-color: #ffe7e7;
   border-right: 0;
   margin-top: -13px;
   top: 50%;
