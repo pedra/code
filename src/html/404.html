@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>404 | Not Found</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		body {
+			background-color: #222;
+			color: #fff;
+			height: 100vh;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			margin: auto;
+			height: 100vh;
+			font-size: 3rem;
+			text-shadow: 0 0 100px #ffffff;
+			transition: 1s;
+		}
+
+		.left,
+		.right {
+			color: #ff8e3c;
+			transition: 1s;
+		}
+
+		.center {
+			background: #fff;
+			height: 5rem;
+			width: 1px;
+		}
+
+		@media screen and (max-width: 500px) {
+			.container {
+				transform: rotate(-90deg)
+			}
+
+			.left {
+				transform: rotate(90deg)
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="left">404</div>
+		<div class="center"></div>
+		<div class="right">Not Found</div>
+	</div>
+</body>
+
+</html>
